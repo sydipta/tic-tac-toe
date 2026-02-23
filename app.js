@@ -48,7 +48,7 @@ function gameOver(){
     })
 }
 function showWinner(player){
-    turn=(turn=="player1")? "Player 2" : "Player 1";
+    turn=(turn=="player1")? "Player-2" : "Player-1";
     mess.innerText=`Congratulation, ${turn} is the winner`
     messContainer.classList.remove("hide");
 }
@@ -97,4 +97,5 @@ function new_Game(){
 }
 newGame.addEventListener("click",new_Game)
 resetBtn.addEventListener("click",new_Game)
+
 
