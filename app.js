@@ -48,7 +48,8 @@ function gameOver(){
     })
 }
 function showWinner(player){
-    mess.innerText=`Congratulation, ${player} is the winner`
+    turn=(turn=="player1")? "Player 2" : "Player 1";
+    mess.innerText=`Congratulation, ${turn} is the winner`
     messContainer.classList.remove("hide");
 }
 
@@ -67,11 +68,11 @@ const clk=(event) => {
     box.classList.remove("clr1", "clr2");
     if(turn=="player1"){
         turn="player2";
-        box.innerText="O";
+        box.innerText="X";
         box.classList.add("clr1");
     }else{
         turn="player1";
-        box.innerText="X";
+        box.innerText="O";
         box.classList.add("clr2")
     }
     cnt++;
@@ -96,3 +97,4 @@ function new_Game(){
 }
 newGame.addEventListener("click",new_Game)
 resetBtn.addEventListener("click",new_Game)
+
